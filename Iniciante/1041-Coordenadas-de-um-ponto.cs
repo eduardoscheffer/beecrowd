@@ -11,8 +11,10 @@ namespace Program
         {   
             double x, y;
             string[] points = Console.ReadLine().Split(' ');
-            x = double.Parse(points[0], CultureInfo.InvariantCulture); 
-            y = double.Parse(points[1], CultureInfo.InvariantCulture);
+            x = Convert.ToDouble(points[0], CultureInfo.InvariantCulture); 
+            y = Convert.ToDouble(points[1], CultureInfo.InvariantCulture);
+            // Console.WriteLine(x);
+            // Console.WriteLine(y);
 
             if (x == 0 && y == 0)
             {
@@ -20,11 +22,11 @@ namespace Program
             }
             else if (x == 0)
             {
-                Console.WriteLine("Eixo X");
+                Console.WriteLine("Eixo Y");
             }
             else if (y == 0)
             {
-                Console.WriteLine("Eixo y");
+                Console.WriteLine("Eixo X");
             }
             else if (x > 0 && y > 0)
             {
@@ -38,7 +40,7 @@ namespace Program
             {
                 Console.WriteLine("Q3");
             }
-            else if (x < 0 && y < 0)
+            else if (x > 0 && y < 0)
             {
                 Console.WriteLine("Q4");
             }
