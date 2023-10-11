@@ -14,29 +14,23 @@ public class Main {
         Locale.setDefault((Locale.US));
         Scanner sc = new Scanner(System.in);
         
-        int n, alcool = 0, gasolina = 0, diesel = 0;
+        int[] count = new int[4];
+        int n;
         
         do {
             
             n = sc.nextInt();
-            switch(n) {
-                case 1:
-                    alcool++;
-                    break;
-                case 2:
-                    gasolina++;
-                    break;
-                case 3:
-                    diesel++;
-                    break;
+            if (n >= 1 && n < 4) {
+                count[n]++;
             }
             
         } while(n != 4);
         
         System.out.println("MUITO OBRIGADO");
-        System.out.println("Alcool: " + alcool);
-        System.out.println("Gasolina: " + gasolina);
-        System.out.println("Diesel: " + diesel);
+        System.out.printf("Alcool: %d%n", count[1]);
+        System.out.printf("Gasolina: %d%n", count[2]);
+        System.out.printf("Diesel: %d%n", count[3]);
+        
         
         
         sc.close();
